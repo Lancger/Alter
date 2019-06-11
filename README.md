@@ -21,9 +21,14 @@ pip install requests
 ### 使用  
 * ##### 钉钉webhook机器人  
 ``` python  
+#!/usr/bin/env python  
+# -*- coding: utf-8 -*- 
 import alter
-dtack = alter.DinTalk("e897e8fec**********") #webhook地址，只需要webhook=后面的值
-ret = dtack.sendmessage("13996438187","消息") #发送的用户，以及发送的消息，多用户使用"user1|user2|user3"
+#webhook地址，只需要webhook=后面的值
+dtack = alter.DinTalk("e897e8fec**********")
+
+#发送的用户，以及发送的消息，多用户使用"user1|user2|user3"
+ret = dtack.sendmessage("13996438187","消息") 
 if ret["errcode"]:
     print("发送成功")
 else:
